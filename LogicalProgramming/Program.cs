@@ -14,7 +14,7 @@ namespace LogicalProgramming
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series\n2.PerfectNumber\n3.PrimeNumber\n4.ReverseNumber\n5.CouponNumbers\n6.Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series\n2.PerfectNumber\n3.PrimeNumber\n4.ReverseNumber\n5.CouponNumbers\n6.DayOfWeek\n7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -49,6 +49,16 @@ namespace LogicalProgramming
                         couponNumbers.CreateNumber(NUM);
                         break;
                     case 6:
+                        Console.WriteLine("Enter Day");
+                        int d = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Month");
+                        int m = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Year");
+                        int y = Convert.ToInt32(Console.ReadLine());
+                        DayOfWeek dayOfWeek = new DayOfWeek();
+                        dayOfWeek.Get_Weekday(d, m, y);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
