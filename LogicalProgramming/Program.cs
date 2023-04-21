@@ -14,7 +14,7 @@ namespace LogicalProgramming
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series\n2.PerfectNumber\n3.PrimeNumber\n4.ReverseNumber\n5.CouponNumbers\n6.DayOfWeek\n7.TempConversion\n8.Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series\n2.PerfectNumber\n3.PrimeNumber\n4.ReverseNumber\n5.CouponNumbers\n6.DayOfWeek\n7.TempConversion\n8.MonthlyPayment\n9.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -67,6 +67,16 @@ namespace LogicalProgramming
                         tempConversion.Conversion(C, T);
                         break;
                     case 8:
+                        Console.WriteLine("Enter Principle Amount");
+                        double Amount = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Year");
+                        double Year = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Rate");
+                        double Rate = Convert.ToInt32(Console.ReadLine());
+                        MonthlyPayment monthlyPayment = new MonthlyPayment();
+                        monthlyPayment.CalculatePayment(Amount, Year, Rate);
+                        break;
+                    case 9:
                         flag = false;
                         break;
                 }
