@@ -14,7 +14,7 @@ namespace LogicalProgramming
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select an option 1.Fibonacci Series\n2.PerfectNumber\n3.PrimeNumber\n4.ReverseNumber\n5.Exit");
+                Console.WriteLine("Select an option 1.Fibonacci Series\n2.PerfectNumber\n3.PrimeNumber\n4.ReverseNumber\n5.CouponNumbers\n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -43,6 +43,12 @@ namespace LogicalProgramming
                         reverse.ReverseNumber(R);
                         break;
                     case 5:
+                        Console.WriteLine("Enter the Number of Coupon");
+                        int NUM = Convert.ToInt32(Console.ReadLine());
+                        CouponNumbers couponNumbers = new CouponNumbers();
+                        couponNumbers.CreateNumber(NUM);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
